@@ -7,3 +7,4 @@ edition.workspace = true
 rust-version.workspace = true
 
 [dependencies]
+axum = "0.6.20"
