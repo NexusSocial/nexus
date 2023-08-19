@@ -2,6 +2,7 @@
 resolver = "2"
 members = [
 	"client",
+	"did-integrity",
 	"server",
 	"common",
 	"protocols/direct-message",
