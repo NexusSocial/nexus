@@ -3,6 +3,10 @@ resolver = "2"
 members = [
 	"client",
 	"server",
+	"common",
+	"protocols/direct-message",
+	"protocols/client-direct-message-sdk",
+	"examples/client-messaging-example"
 ]
 
 # These settings will apply to all members of the workspace that opt in to them
@@ -12,3 +16,13 @@ license = "MIT OR BSD-2-Clause-Patent"
 repository = "https://github.com/NexusSocial/nexus"
 edition = "2021"
 rust-version = "1.71.1"
+
+[workspace.dependencies]
+common = { path = "./common"}
+client = { path = "./client"}
+direct-message = { path = "./protocols/direct-message"}
+client-direct-message-sdk = { path = "./protocols/client-direct-message-sdk"}
+serde = "1.0.173"
+serde_json = "1.0.103"
+reqwest = "0.11.18"
+anyhow = "1.0.72"
