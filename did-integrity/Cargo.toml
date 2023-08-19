@@ -7,4 +7,6 @@ edition.workspace = true
 rust-version.workspace = true
 
 [dependencies]
+multibase = "0.9.1"
 signature = "2.1.0"
+thiserror = "1.0.47"

@@ -2,12 +2,12 @@
 resolver = "2"
 members = [
 	"client",
-	"did-integrity",
-	"server",
 	"common",
-	"protocols/direct-message",
+	"did-integrity",
+	"examples/client-messaging-example",
 	"protocols/client-direct-message-sdk",
-	"examples/client-messaging-example"
+	"protocols/direct-message",
+	"server",
 ]
 
 # These settings will apply to all members of the workspace that opt in to them
