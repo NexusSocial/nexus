@@ -1,5 +1,8 @@
 //! Module for everything specific to Decentralized Identifiers (DIDs).
 
+mod key;
+
+use self::key::DidKey;
 use crate::asymmetric::{PublicKey, Signature};
 
 /// A decentralized identifier.
@@ -9,24 +12,13 @@ pub enum Did {
 	Web(DidWeb),
 }
 
-/// Everything after `did:key:`.
-#[derive(Debug, Eq, PartialEq)]
-pub struct DidKey(String);
-impl DidKey {
-	/// Resolves the key to its document. This is possible without any IO, as a
-	/// `did:key` is self-describing.
-	fn resolve() -> DidDocument {
-		todo!()
-	}
-}
-
-/// Everything after `did:web:`.
+// TODO: parse this
 #[derive(Debug, Eq, PartialEq)]
 pub struct DidWeb(String);
 
 /// A [`Did`] resolves to a [`DidDocument`].
 #[derive(Debug, Eq, PartialEq)]
-struct DidDocument {
+pub struct DidDocument {
 	/// A `DidDocument` is self describing in that it contains the `Did` too.
 	pub did: Did,
 	pub pubkey: PublicKey,
