@@ -8,6 +8,7 @@ rust-version.workspace = true
 
 [dependencies]
 axum = "0.6.20"
+axum-macros = "0.3.8"
 tokio = {version = "1.29.1", features = ["full"] }
 reqwest = { workspace = true, features = ["json"] }
 serde_json = { workspace = true }

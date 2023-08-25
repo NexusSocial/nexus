@@ -1,5 +1,5 @@
 use anyhow::Result;
-use client::read_queue;
+//use client::read_queue;
 use common::{Did, DidMsg, Homeserver, Payload, Protocol};
 use direct_message::{DirectMessage, LocalMessage};
 
@@ -20,6 +20,8 @@ impl Client {
 		}
 	}
 	pub async fn send_dm(&self, dm: DirectMessage, to: Did) -> Result<()> {
+		todo!();
+		/*
 		client::remote_send(
 			self.homeserver.clone(),
 			DidMsg {
@@ -31,8 +33,11 @@ impl Client {
 		)
 		.await?;
 		Ok(())
+		 */
 	}
 	pub async fn read_dms(&self) -> Result<Vec<DirectMessage>> {
+		todo!()
+		/*
 		// first we read all the message queues we have and store them back in the server.
 		while let Some(did_msg) =
 			read_queue(self.homeserver.clone(), Self::protocol(), self.did.clone())
@@ -71,5 +76,6 @@ impl Client {
 		.unwrap();
 		let msgs = serde_json::from_str(&payload.0).unwrap();
 		Ok(msgs)
+		 */
 	}
 }
